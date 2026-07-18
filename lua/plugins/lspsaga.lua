@@ -1,7 +1,8 @@
--- lspsaga: VSCode風の LSP プレビューUI
+-- lspsaga: VSCode風のLSPプレビューUI
 return {
   "nvimdev/lspsaga.nvim",
-  event = "LspAttach",
+  -- eventではなく手動ロード確定 (確実に起動時ロード)
+  lazy = false,
   dependencies = {
     "nvim-treesitter/nvim-treesitter",
     "nvim-tree/nvim-web-devicons",
